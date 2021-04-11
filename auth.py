@@ -7,6 +7,8 @@ from operations import bankOperations
 database = {}
 
 def init():
+    print('*************************************************')
+    print('*************************************************')
     print('Welcome to BankPHP')
     choice = int(input('What do you want to do? \n 1. Login \n 2. Create an account \n 3. Exit app \n'))
     if(choice==1):
@@ -41,6 +43,7 @@ def registr():
     print('** **** ***** **** ***')
     print('Your account number is %s' %accountNumber)
     print('Make sure to keep it safe. Do not show your password to anyone.')
+    print('*************************************************')
     login()
 
 
