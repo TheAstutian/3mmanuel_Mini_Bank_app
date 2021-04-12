@@ -38,7 +38,7 @@ def registr():
     last_name= input('What is your Last Name?\n')
     password = input('Please choose a password\n')
     accountNumber = generateAccountNo()
-    database[accountNumber] = [first_name, last_name, email, password]
+    database[accountNumber] = [first_name, last_name, email, password, accountNumber, 0]
     print('Your account has been created')
     print('** **** ***** **** ***')
     print('Your account number is %s' %accountNumber)
@@ -60,9 +60,6 @@ def login():
             if(accountNumber == userAccountNumber):
                 if(userDetails[3]==userPassword):
                     print('Login Successful')
-                    balance =0
-                    database[accountNumber].append(accountNumber)
-                    database[accountNumber].append(balance)
                     bankOperations(database[accountNumber])
                     init()
                 else:
